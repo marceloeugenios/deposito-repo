@@ -1,0 +1,41 @@
+application:
+  title: Deposito-servico
+  version: 1.0v
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, info"
+  info:
+    git:
+      mode: full
+
+spring:
+  jpa:
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://deposito-db:5432/deposito_db
+    username: deposito
+    password: deposito
+
+keycloak:
+  auth-server-url: http://188.166.126.100:8080/auth
+  realm: deposito-app
+  resource: deposito-client
+  credentials:
+    secret: 9LCTZqQM1EGTC9cbyCRfdmprKcHCb0bB
+  use-resource-role-mappings: true
+  bearer-only: true
+
+app:
+  authorization-uri: http://188.166.126.100:8080/auth/realms/deposito-app/protocol/openid-connect/token
+  user-info-uri: http://188.166.126.100:8080/auth/realms/deposito-app/protocol/openid-connect/userinfo
+  token-uri: http://188.166.126.100:8080/auth/realms/deposito-app/protocol/openid-connect/token
+  logout: http://188.166.126.100:8080/auth/realms/deposito-app/protocol/openid-connect/logout
+  authorization-grant-type: password
+  scope: profile email
+
+logging:
+  level:
+    root: INFO

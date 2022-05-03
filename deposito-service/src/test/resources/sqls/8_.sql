@@ -1,0 +1,1 @@
+UPDATE movimentacao set data_movimentacao = '2022-04-20 00:12:44'

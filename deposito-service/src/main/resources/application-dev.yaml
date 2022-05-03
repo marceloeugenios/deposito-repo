@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    open-in-view: false
+    hibernate:
+    show_sql: true
+    format_sql: true
+    generate-ddl: true
+    ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/deposito_db
+    username: deposito
+    password: deposito
+
+logging:
+  level:
+    root: INFO
