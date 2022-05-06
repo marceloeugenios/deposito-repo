@@ -5,7 +5,7 @@ plugins {
     id 'jacoco'
     id "com.palantir.docker" version "0.30.0"
     id "com.gorylenko.gradle-git-properties" version "2.4.1"
-    id "com.avast.gradle.docker-compose" version "0.15.2"
+    id "com.avast.gradle.docker-compose" version "0.16.3"
 }
 
 group = 'br.com.desafio'
